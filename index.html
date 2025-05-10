@@ -5,69 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mega Games Showcase</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Orbitron:wght@400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header -->
     <header>
       <div class="nav-container">
-        <div class="logo">MEGA <span>GAMES</span></div>
+        <div class="logo">
+          <div class="logo-icon"><i class="fas fa-gamepad"></i></div>
+          <div class="logo-text">MEGA <span>GAMES</span></div>
+        </div>
         <nav>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#games">Games</a></li>
-            <li><a href="#discord">Discord</a></li>
-            <li><a href="#about">About</a></li>
+            <li>
+              <a href="#home"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#games"><i class="fas fa-dice-d20"></i> Games</a>
+            </li>
+            <li>
+              <a href="#discord"><i class="fab fa-discord"></i> Discord</a>
+            </li>
+            <li>
+              <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+            </li>
           </ul>
+          <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
         </nav>
       </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-      <h1>MASSIVE GAMES</h1>
-      <p>
-        This is mega games, a game development group on Roblox. We are dedicated
-        to creating high-quality games that provide an immersive experience for
-        our fans. Our team is passionate about game development and we strive to
-        push the boundaries of creativity and innovation. We are committed to
-        delivering engaging gameplay!
-      </p>
-      <a href="#games" class="cta-button">EXPLORE GAMES</a>
+      <div class="hero-content">
+        <h1>MASSIVE GAMES</h1>
+        <div class="hero-tagline">NEXT-LEVEL GAMING EXPERIENCES</div>
+        <p>
+          This is Mega Games, a passionate game development team on Roblox. We
+          craft high-quality games that deliver immersive experiences through
+          innovative gameplay and creativity. Join our community of players and
+          discover the world of Mega Games.
+        </p>
+        <div class="hero-cta">
+          <a href="#games" class="cta-button primary">
+            <i class="fas fa-gamepad"></i> EXPLORE GAMES
+          </a>
+          <a href="#discord" class="cta-button secondary">
+            <i class="fab fa-discord"></i> JOIN COMMUNITY
+          </a>
+        </div>
+      </div>
+      <div class="hero-graphics">
+        <div class="hero-particles"></div>
+      </div>
     </section>
 
     <!-- Games Section -->
     <section class="games-section" id="games">
-      <h2 class="section-title">OUR GAMES</h2>
+      <div class="section-header">
+        <h2 class="section-title">OUR GAMES</h2>
+        <p class="section-subtitle">Check out our latest creations</p>
+      </div>
       <div class="games-grid">
         <!-- Game 1 -->
         <div class="game-card">
-          <span class="game-badge">CLASSIC</span>
-          <img src="img/BarsImg.png" alt="Bars Game" class="game-image" />
+          <div class="game-badge classic">CLASSIC</div>
+          <div class="game-image-container">
+            <img src="img/BarsImg.png" alt="Bars Game" class="game-image" />
+            <div class="game-overlay">
+              <div class="game-stats">
+                <div class="stat"><i class="fas fa-user"></i> 50K+</div>
+                <div class="stat"><i class="fas fa-star"></i> 4.8/5</div>
+              </div>
+            </div>
+          </div>
           <div class="game-content">
             <h3 class="game-title">Bars: GRIDDY UPDATE</h3>
             <p class="game-description">
               Experience the ultimate horror experience with bars: the griddy
-              update. Escape the new griddy monster and try tofind your way out
+              update. Escape the new griddy monster and try to find your way out
               of the labyrinth, solo or with friends.
             </p>
+            <div class="game-tags">
+              <span class="tag">Horror</span>
+              <span class="tag">Multiplayer</span>
+              <span class="tag">Escape</span>
+            </div>
             <a
               target="_blank"
               href="https://www.roblox.com/games/16962462619/Bars-GRIDDY-UPDATE"
               class="game-link"
             >
-              Play Now
+              <i class="fas fa-play"></i> Play Now
             </a>
           </div>
         </div>
 
         <!-- Game 2 -->
         <div class="game-card">
-          <span class="game-badge">NEW</span>
-          <img
-            src="img/MegaFightersBanner.png"
-            alt="Mega Fighters Game"
-            class="game-image"
-          />
+          <div class="game-badge new">NEW</div>
+          <div class="game-image-container">
+            <img
+              src="img/MegaFightersBanner.png"
+              alt="Mega Fighters Game"
+              class="game-image"
+            />
+            <div class="game-overlay">
+              <div class="game-stats">
+                <div class="stat"><i class="fas fa-user"></i> 25K+</div>
+                <div class="stat"><i class="fas fa-star"></i> 4.6/5</div>
+              </div>
+            </div>
+          </div>
           <div class="game-content">
             <h3 class="game-title">Mega Fighters</h3>
             <p class="game-description">
@@ -75,20 +135,34 @@
               meets skill! Choose from dozens of unique guns and battle against
               other players in epic spam jumping showdowns.
             </p>
+            <div class="game-tags">
+              <span class="tag">Action</span>
+              <span class="tag">PvP</span>
+              <span class="tag">Shooter</span>
+            </div>
             <a
               target="_blank"
               href="https://www.roblox.com/games/82297228726094/Mega-Fighters"
               class="game-link"
             >
-              Play Now
+              <i class="fas fa-play"></i> Play Now
             </a>
           </div>
         </div>
 
         <!-- Coming Soon Game -->
         <div class="game-card">
-          <span class="game-badge">COMING SOON</span>
-          <img src="img/griddy.png" alt="Mystery Game" class="game-image" />
+          <div class="game-badge coming-soon">COMING SOON</div>
+          <div class="game-image-container">
+            <img src="img/griddy.png" alt="Mystery Game" class="game-image" />
+            <div class="game-overlay">
+              <div class="game-stats">
+                <div class="stat">
+                  <i class="fas fa-calendar"></i> Summer 2025
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="game-content">
             <h3 class="game-title">???</h3>
             <p class="game-description">
@@ -96,8 +170,67 @@
               game, BARS. Join our Discord to get early access and exclusive
               updates about this mysterious new project!
             </p>
-            <a href="#discord" class="game-link"> Get Updates </a>
+            <div class="game-tags">
+              <span class="tag">Mystery</span>
+              <span class="tag">Prequel</span>
+              <span class="tag">Exclusive</span>
+            </div>
+            <a href="#discord" class="game-link">
+              <i class="fas fa-bell"></i> Get Updates
+            </a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="section-header">
+        <h2 class="section-title">WHY MEGA GAMES?</h2>
+        <p class="section-subtitle">What makes our games stand out</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-vr-cardboard"></i>
+          </div>
+          <h3>Immersive Experiences</h3>
+          <p>
+            We create games with rich environments and engaging gameplay that
+            keep players coming back for more.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Community</h3>
+          <p>
+            I'm creating games not just for players, but with them. I welcome
+            ideas, suggestions, and requests for new game concepts—because the
+            best experiences often start with your imagination. Together, we can
+            shape the future of this growing community.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Big Updates</h3>
+          <p>
+            Updates are acked with new content, ensuring that players always
+            have something new to explore.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Safe Environment</h3>
+          <p>
+            All our games provide a secure and age-appropriate gaming
+            experience.
+          </p>
         </div>
       </div>
     </section>
@@ -105,17 +238,71 @@
     <!-- Discord Section -->
     <section class="discord-section" id="discord">
       <div class="discord-container">
-        <h2 class="discord-title">JOIN OUR DISCORD</h2>
-        <p class="discord-description">
-          Connect with our community, get exclusive game updates, participate in
-          events, and share your gameplay experiences.
+        <div class="discord-content">
+          <h2 class="discord-title">JOIN OUR DISCORD</h2>
+          <p class="discord-description">
+            Connect with our community, get exclusive game updates, participate
+            in events, and share your gameplay experiences.
+          </p>
+          <div class="discord-features">
+            <div class="discord-feature">
+              <i class="fas fa-newspaper"></i>
+              <span>Game Updates</span>
+            </div>
+            <div class="discord-feature">
+              <i class="fas fa-gift"></i>
+              <span>Exclusive Content</span>
+            </div>
+            <div class="discord-feature">
+              <i class="fas fa-headset"></i>
+              <span>Live Support</span>
+            </div>
+          </div>
+          <a
+            href="https://discord.gg/9Xp7VRrHCE"
+            target="_blank"
+            class="discord-button"
+          >
+            <i class="fab fa-discord"></i> Join Our Discord
+          </a>
+        </div>
+        <div class="discord-graphic">
+          <div class="discord-logo">
+            <i class="fab fa-discord"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="section-header">
+        <h2 class="section-title">ABOUT US</h2>
+        <p class="section-subtitle">The mission behind the games</p>
+      </div>
+      <div class="about-content">
+        <p>
+          As an indie game developer, my mission is to create unique, immersive
+          experiences that leave a lasting impression. With a passion for
+          storytelling, gameplay innovation, and design, I strive to craft games
+          that stand out from the crowd.
         </p>
-        <a
-          href="https://discord.gg/9Xp7VRrHCE"
-          target="_blank"
-          class="discord-button"
-        >
-          Join Our Discord
+        <p>
+          What began as a solo passion project has grown into a supportive and
+          engaged community of players. I'm committed to evolving with every
+          release, always listening to feedback and pushing the limits of what's
+          possible in indie game development.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <h2>READY TO PLAY?</h2>
+        <p>Dive into our games and join the adventure today!</p>
+        <a href="#games" class="cta-button primary">
+          <i class="fas fa-gamepad"></i> EXPLORE GAMES
         </a>
       </div>
     </section>
@@ -123,15 +310,46 @@
     <!-- Footer -->
     <footer>
       <div class="footer-content">
-        <div class="footer-logo">MEGA <span>GAMES</span></div>
-        <div class="footer-links">
-          <a href="#home">Home</a>
-          <a href="#games">Games</a>
-          <a href="#discord">Discord</a>
-          <a href="#about">About</a>
+        <div class="footer-top">
+          <div class="footer-logo">
+            <div class="logo-icon"><i class="fas fa-gamepad"></i></div>
+            <div class="logo-text">MEGA <span>GAMES</span></div>
+          </div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+            <a href="#discord">Discord</a>
+            <a href="#about">About</a>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://discord.gg/9Xp7VRrHCE" class="social-link"
+              ><i class="fab fa-discord"></i
+            ></a>
+          </div>
         </div>
-        <p class="copyright">© 2025 Mega Games. All rights reserved.</p>
+        <div class="footer-bottom">
+          <p class="copyright">© 2025 Mega Games. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script>
+      // Simple JavaScript for mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.querySelector(".nav-toggle");
+        const navUl = document.querySelector("nav ul");
+
+        navToggle.addEventListener("click", function () {
+          navUl.classList.toggle("show");
+        });
+      });
+    </script>
   </body>
 </html>
