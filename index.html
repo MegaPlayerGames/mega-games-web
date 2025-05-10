@@ -77,108 +77,41 @@
         <h2 class="section-title">OUR GAMES</h2>
         <p class="section-subtitle">Check out our latest creations</p>
       </div>
-      <div class="games-grid">
-        <!-- Game 1 -->
-        <div class="game-card">
-          <div class="game-badge classic">CLASSIC</div>
-          <div class="game-image-container">
-            <img src="img/BarsImg.png" alt="Bars Game" class="game-image" />
-            <div class="game-overlay">
-              <div class="game-stats">
-                <div class="stat"><i class="fas fa-user"></i> 50K+</div>
-                <div class="stat"><i class="fas fa-star"></i> 4.8/5</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-content">
-            <h3 class="game-title">Bars: GRIDDY UPDATE</h3>
-            <p class="game-description">
-              Experience the ultimate horror experience with bars: the griddy
-              update. Escape the new griddy monster and try to find your way out
-              of the labyrinth, solo or with friends.
-            </p>
-            <div class="game-tags">
-              <span class="tag">Horror</span>
-              <span class="tag">Multiplayer</span>
-              <span class="tag">Escape</span>
-            </div>
-            <a
-              target="_blank"
-              href="https://www.roblox.com/games/16962462619/Bars-GRIDDY-UPDATE"
-              class="game-link"
-            >
-              <i class="fas fa-play"></i> Play Now
-            </a>
-          </div>
-        </div>
 
-        <!-- Game 2 -->
-        <div class="game-card">
-          <div class="game-badge new">NEW</div>
-          <div class="game-image-container">
-            <img
-              src="img/MegaFightersBanner.png"
-              alt="Mega Fighters Game"
-              class="game-image"
-            />
-            <div class="game-overlay">
-              <div class="game-stats">
-                <div class="stat"><i class="fas fa-user"></i> 25K+</div>
-                <div class="stat"><i class="fas fa-star"></i> 4.6/5</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-content">
-            <h3 class="game-title">Mega Fighters</h3>
-            <p class="game-description">
-              Enter the arena in this gunslinging fighting game where strategy
-              meets skill! Choose from dozens of unique guns and battle against
-              other players in epic spam jumping showdowns.
-            </p>
-            <div class="game-tags">
-              <span class="tag">Action</span>
-              <span class="tag">PvP</span>
-              <span class="tag">Shooter</span>
-            </div>
-            <a
-              target="_blank"
-              href="https://www.roblox.com/games/82297228726094/Mega-Fighters"
-              class="game-link"
-            >
-              <i class="fas fa-play"></i> Play Now
-            </a>
-          </div>
+      <!-- Search and Filter -->
+      <div class="games-search-container">
+        <div class="search-bar">
+          <input
+            type="text"
+            id="gameSearchInput"
+            placeholder="Search games..."
+          />
+          <button id="searchButton"><i class="fas fa-search"></i></button>
         </div>
+        <div class="games-filter">
+          <select id="gameFilter">
+            <option value="all">All Games</option>
+            <option value="Horror">Horror</option>
+            <option value="Action">Action</option>
+            <option value="PvP">PvP</option>
+            <option value="Survival">Survival</option>
+          </select>
+        </div>
+      </div>
 
-        <!-- Coming Soon Game -->
-        <div class="game-card">
-          <div class="game-badge coming-soon">COMING SOON</div>
-          <div class="game-image-container">
-            <img src="img/griddy.png" alt="Mystery Game" class="game-image" />
-            <div class="game-overlay">
-              <div class="game-stats">
-                <div class="stat">
-                  <i class="fas fa-calendar"></i> Summer 2025
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="game-content">
-            <h3 class="game-title">???</h3>
-            <p class="game-description">
-              Something big is coming to Mega Games! The prequel to our massive
-              game, BARS. Join our Discord to get early access and exclusive
-              updates about this mysterious new project!
-            </p>
-            <div class="game-tags">
-              <span class="tag">Mystery</span>
-              <span class="tag">Prequel</span>
-              <span class="tag">Exclusive</span>
-            </div>
-            <a href="#discord" class="game-link">
-              <i class="fas fa-bell"></i> Get Updates
-            </a>
-          </div>
+      <!-- Pagination Controls -->
+      <div class="games-pagination">
+        <button id="prevGames" disabled>
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <span id="pageIndicator">Page 1/1</span>
+        <button id="nextGames"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <!-- Games Container -->
+      <div class="games-container">
+        <div class="games-grid" id="gamesGrid">
+          <!-- Games will be loaded dynamically with JavaScript -->
         </div>
       </div>
     </section>
@@ -351,5 +284,6 @@
         });
       });
     </script>
+    <script src="games.js"></script>
   </body>
 </html>
