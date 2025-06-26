@@ -2,12 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const games = [
     {
       id: 1,
-      title: "Bars: GRIDDY UPDATE",
+      title: "Bars: FINAL UPDATE",
       description:
-        "Experience the ultimate horror experience with bars: the griddy update. Escape the new griddy monster and try to find your way out of the labyrinth, solo or with friends.",
+        "Experience the final horror chapter in BARS: The Final Update. Uncover CaseOhh's lost snack recipe, and find your way out of the labyrinth — solo or with friends.",
       image: "img/BarsImg.png",
-      url: "https://www.roblox.com/games/16962462619/Bars-GRIDDY-UPDATE",
-      players: 463,
+      url: "https://www.roblox.com/games/16962462619/Bars-CASE-OHH",
+      players: 468,
       rating: "5/5",
       tags: ["Horror", "Multiplayer", "Escape"],
       badge: { text: "CLASSIC", class: "classic" },
@@ -19,23 +19,37 @@ document.addEventListener("DOMContentLoaded", function () {
         "Enter the arena in this gunslinging fighting game where strategy meets skill! Choose from dozens of unique guns and battle against other players in epic spam jumping showdowns.",
       image: "img/MegaFightersBanner.png",
       url: "https://www.roblox.com/games/82297228726094/Mega-Fighters",
-      players: 70,
+      players: 100,
       rating: "5/5",
       tags: ["Action", "PvP", "Shooter"],
       badge: { text: "NEW", class: "new" },
     },
+
     {
       id: 3,
-      title: "???",
+      title: "The Invite",
       description:
-        "Something big is coming to Mega Games! The prequel to our massive game, BARS. Join our Discord to get early access and exclusive updates about this mysterious new project!",
-      image: "img/griddy.png",
-      url: "#discord",
-      releaseDate: "Summer 2025",
-      tags: ["Mystery", "Prequel", "Exclusive"],
-      badge: { text: "COMING SOON", class: "coming-soon" },
-      isComingSoon: true,
+        "Welcome to The Invite. A night to remember, a place you can’t forget. Join the party — the Griddy party.",
+
+      image: "img/InviteBanner.png",
+      url: "https://www.roblox.com/games/102396479433239/The-Invite-Story",
+      players: 1,
+      rating: "5/5",
+      tags: ["Story", "Action", "Puzzle"],
+      badge: { text: "NEW", class: "new" },
     },
+    // {
+    //   id: 3,
+    //   title: "???",
+    //   description:
+    //     "Something big is coming to Mega Games! The prequel to our massive game, BARS. Join our Discord to get early access and exclusive updates about this mysterious new project!",
+    //   image: "img/griddy.png",
+    //   url: "#discord",
+    //   releaseDate: "Summer 2025",
+    //   tags: ["Mystery", "Prequel", "Exclusive"],
+    //   badge: { text: "COMING SOON", class: "coming-soon" },
+    //   isComingSoon: true,
+    // },
     {
       id: 4,
       title: "Mega Islands",
@@ -46,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       players: 223,
       rating: "4.4/5",
       tags: ["Survival", "PvP", "Open World"],
-      badge: { text: "Remake?", class: "new" },
+      badge: { text: "Old", class: "classic" },
     },
   ];
 
@@ -59,12 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextButton = document.getElementById("nextGames");
   const pageIndicator = document.getElementById("pageIndicator");
 
-  // Pagination settings
-  const gamesPerPage = 4; // Adjust based on your layout
+  // settings
+  const gamesPerPage = 4;
   let currentPage = 1;
   let filteredGames = [...games];
 
-  // Initialize the page
   displayGames();
 
   // Event Listeners
@@ -88,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Functions
+  // Functions //
   function performSearch() {
     const searchTerm = searchInput.value.toLowerCase();
     const selectedCategory = categoryFilter.value;
@@ -105,12 +118,11 @@ document.addEventListener("DOMContentLoaded", function () {
       return matchesSearch && matchesCategory;
     });
 
-    currentPage = 1; // Reset to first page on new search
+    currentPage = 1;
     displayGames();
   }
 
   function displayGames() {
-    // Clear games grid
     gamesGrid.innerHTML = "";
 
     if (filteredGames.length === 0) {
@@ -120,17 +132,14 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Calculate start and end index for current page
     const startIndex = (currentPage - 1) * gamesPerPage;
     const endIndex = Math.min(startIndex + gamesPerPage, filteredGames.length);
 
-    // Display games for current page
     for (let i = startIndex; i < endIndex; i++) {
       const game = filteredGames[i];
       gamesGrid.appendChild(createGameCard(game));
     }
 
-    // Update pagination
     updatePagination();
   }
 
@@ -149,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameCard = document.createElement("div");
     gameCard.className = "game-card";
 
-    // Add badge if exists
     if (game.badge) {
       const badge = document.createElement("div");
       badge.className = `game-badge ${game.badge.class}`;
@@ -157,7 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
       gameCard.appendChild(badge);
     }
 
-    // Create image container
     const imageContainer = document.createElement("div");
     imageContainer.className = "game-image-container";
 
@@ -198,7 +205,6 @@ document.addEventListener("DOMContentLoaded", function () {
     imageContainer.appendChild(overlay);
     gameCard.appendChild(imageContainer);
 
-    // Create content
     const content = document.createElement("div");
     content.className = "game-content";
 
